@@ -1,0 +1,2 @@
+# translator
+Dolibarr translator
