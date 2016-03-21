@@ -69,20 +69,22 @@ $formCore = new TFormCore();
         
         <table width="100%">
             <tr class="liste_titre">
-                <td>
+                <td width="50%">
                     base :
                 </td>
-                <td>
+                <td width="50%">
                     traduit :
                 </td>
             </tr>
             
             <tr>
-                <td>
-                    
+                <td width="50%">
+                    <textarea value='<?php $value_before?>' width="100%">
+                    </textarea>
                 </td>
-                <td>
-                
+                <td width="50%">
+                    <textarea value='<?php $value_after?>' width="100%">
+                    </textarea>
                 </td>
             </tr>
         
