@@ -2,7 +2,8 @@
 
 require 'config.php';
 
-
+dol_include_once('/class/translator.class.php');
+dol_include_once('/class/translator_langs.class.php');
 // Security check
 $result=restrictedArea($user,'societe',0,'','','','');
 
@@ -87,6 +88,64 @@ $formCore = new TFormCore();
                     </textarea>
                 </td>
         </table>
+        
+    </div>
+
+
+    <div>
+        <form method="post" name="form_add_language" action="translator.php">
+            <table width="100%">
+                <tr class="ligne_titre">
+                    <td colspan=4>
+                    Ajout d'une traduction
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=2>
+                        Choisir la langue de départ :
+                    </td>
+                    <td colspan=2>
+                        <?php
+                        select_langues('langue_depart');
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan=2>
+                        Choisir la langue d'arrivée :
+                    </td>
+                    <td colspan=2>
+                        <?php
+                        select_langues('langue_arrivee');
+                        ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Choisir le mot à traduire :
+                    </td>
+                    <td>
+                        <input type="text" name="to_translate"></input>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Choisir la traduction :
+                    </td>
+                    <td>
+                        <input type="text" name="translated"></input>
+                    </td>
+                </tr>
+                <tr>        
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button type="submit" name="submit">Traduire</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
         
     </div>
 

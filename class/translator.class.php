@@ -14,5 +14,6 @@ class TTranslator extends TObjetStd {
         $this->start();
     }
     
+    
 }
 
