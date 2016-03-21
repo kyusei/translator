@@ -86,8 +86,6 @@ $formCore = new TFormCore();
                     <textarea value='<?php $value_after?>' width="100%">
                     </textarea>
                 </td>
-            </tr>
-        
         </table>
         
     </div>

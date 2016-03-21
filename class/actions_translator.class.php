@@ -60,9 +60,58 @@ class Actionstranslator
 	 * @return  int                             < 0 on error, 0 on success, 1 to replace standard code
 	 */
 
-	}
+	
     
     function addMoreActionsButtons($parameters, &$object, &$action,$hookmanager){
-        print "test";
+        ?>
+        <div class="">
+            <form method="post" name="formTranslator" action="translator.php">
+                <table width=100%>
+                    <tr class="liste_titre">
+                        <td colspan=3>
+                            <label>Traducteur :</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">
+                            <label>Saisissez langue d'arrivée : </label>
+                        </td>
+                        <td colspan=2 align="left">
+
+                            <select name="lang">
+                                <option name="opt1" value="Anglais">Anglais</option>
+                            </select>
+                        </td>
+                </tr>
+                    
+
+                </table>
+            </form>
+            
+            <table width=100%>
+                    <tr class="liste_titre">
+                        <td>
+                            Texte avant traduction :
+                        </td>
+                        <td>
+                            Texte traduit :
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea value='<?php $value_before?>' width="100%">
+                            </textarea>
+                        </td>
+                        <td>
+                            <textarea value='<?php $value_after?>' width="100%">
+                            </textarea>
+                        </td>
+                    </tr>
+
+                </table>
+        </div>
+        </br>
+        
+        <?php
     }
 }
